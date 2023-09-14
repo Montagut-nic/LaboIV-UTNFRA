@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Ej01';
+  title = 'Nicolas Montagut - Ej01';
   public btnCalcular: string = "Calcular";
   public btnLimpiar: string = "Limpiar cuadros de textos";
   public edadUno: any = "";
