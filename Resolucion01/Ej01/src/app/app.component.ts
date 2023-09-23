@@ -28,7 +28,7 @@ export class AppComponent {
 
   public Promediar(): void
   {
-    this.promedio = (parseInt(this.edadDos) + parseInt(this.edadUno)) / 2;
+    this.promedio = this.suma / 2;
   }
 
   public Limpiar(): void
