@@ -15,7 +15,7 @@ export class LoginComponent {
 
   public usuario: Usuario = new Usuario();
 
-  public logear() {
+  public loguear() {
     signInWithEmailAndPassword(auth, this.usuario.mail, this.usuario.clave)
       .then((userCredential) => {
         const user = userCredential.user;

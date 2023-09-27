@@ -1,6 +1,6 @@
 <h1>Log in</h1><br>
-<form>
-    <input type="text" [(ngModel)]="usuario.mail" required placeholder="Usuario"> <br>
-    <input type="password" [(ngModel)]="usuario.clave" required placeholder="Clave"> <br>
-    <button type="submit" (click)="logear()">Entrar</button>
+<form (ngSubmit)="loguear()" >
+    <input type="text" [(ngModel)]="usuario.mail" placeholder="Usuario"> <br>
+    <input type="password" [(ngModel)]="usuario.clave" placeholder="Clave"> <br>
+    <input type="submit" value="Ingresar">
 </form>
