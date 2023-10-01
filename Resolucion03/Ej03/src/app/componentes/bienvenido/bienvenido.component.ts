@@ -1,13 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { getAuth} from 'firebase/auth';
 import { initializeApp } from "firebase/app";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-bienvenido',
   templateUrl: './bienvenido.component.html',
   styleUrls: ['./bienvenido.component.scss']
 })
-export class BienvenidoComponent {
-  public nombre : any = auth.currentUser?.email;
+export class BienvenidoComponent implements OnInit {
+  public nombre : string = "";
+  
+  constructor(private router: Router) { };
+
+  ngOnInit(): void{
+    if (auth.currentUser != null) {
+      this.nombre=auth.currentUser.email? auth.currentUser.email : "";
+    } else {
+      this.router.navigateByUrl("/login");
+    }
+  }
 }
 // Your web app's Firebase configuration
 const firebaseConfig = {
